@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class HashMapPractice {
     public static void main(String[] args) {
 
-        HashMap<String, Double> students = new HashMap<>();
+        HashMap<String, Integer> students = new HashMap<>();
         Scanner input = new Scanner(System.in);
         String newStudent;
 
@@ -21,7 +21,7 @@ public class HashMapPractice {
 
             if (!newStudent.equals("")) {
                 System.out.print("ID: ");
-                Double newId = input.nextDouble();
+                Integer newId = input.nextInt();
                 students.put(newStudent, newId);
 
                 // Read in the newline before looping back
@@ -34,7 +34,7 @@ public class HashMapPractice {
         System.out.println("\nClass roster:");
 //        double sum = 0.0;
 
-        for (Map.Entry<String, Double> student : students.entrySet()) {
+        for (Map.Entry<String, Integer> student : students.entrySet()) {
             System.out.println(student.getKey() + " (" + student.getValue() + ")");
 //            sum += student.getValue();
         }
