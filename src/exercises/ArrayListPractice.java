@@ -77,12 +77,12 @@ public class ArrayListPractice {
         System.out.println("Enter a word length: ");
         int numChars = input.nextInt();
 
-        // loop through an ArrayList with the for-each loop
-//        for (String word : arr) {
-//            if (word.length() == numChars) {
-//                System.out.println(word);
-//            }
-//        }
+//         loop through an ArrayList with the for-each loop
+        for (String word : arr) {
+            if (word.length() == numChars) {
+                System.out.println(word);
+            }
+        }
     }
 }
 
