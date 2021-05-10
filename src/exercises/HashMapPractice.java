@@ -4,10 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
+// 1. It takes in student names and ID numbers (as integers) instead of names and
+// grades.
+
+// 2. The keys should be the IDs and the values should be the names.
 public class HashMapPractice {
     public static void main(String[] args) {
 
-        HashMap<String, Integer> students = new HashMap<>();
+        HashMap<Integer, String> classRoster = new HashMap<>();
         Scanner input = new Scanner(System.in);
         String newStudent;
 
@@ -15,36 +19,26 @@ public class HashMapPractice {
 
         // Get student names and ID numbers
         do {
-
             System.out.print("Student: ");
             newStudent = input.nextLine();
 
             if (!newStudent.equals("")) {
                 System.out.print("ID: ");
-                Integer newId = input.nextInt();
-                students.put(newStudent, newId);
+                Integer newID = input.nextInt();
+                classRoster.put(newID, newStudent);
 
-                // Read in the newline before looping back
                 input.nextLine();
             }
+        } while (!newStudent.equals(""));
 
-        } while(!newStudent.equals(""));
+        input.close();
 
-        // Print class roster
         System.out.println("\nClass roster:");
-//        double sum = 0.0;
 
-        for (Map.Entry<String, Integer> student : students.entrySet()) {
-            System.out.println(student.getKey() + " (" + student.getValue() + ")");
-//            sum += student.getValue();
+        for (Map.Entry<Integer, String> student : classRoster.entrySet()) {
+            System.out.println(student.getValue() + "'s ID: " + student.getKey());
         }
 
-//        double avg = sum / students.size();
-//        System.out.println("Average grade: " + avg);
+        System.out.println("Number of students in roster: " + classRoster.size());
     }
 }
-
-
-// 1. It takes in student names and ID numbers (as integers) instead of names and grades.
-// 2. The keys should be the IDs and the values should be the names.
-// 3. Modify the roster printing code accordingly.
