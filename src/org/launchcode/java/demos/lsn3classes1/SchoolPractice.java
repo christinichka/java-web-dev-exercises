@@ -16,6 +16,26 @@ public class SchoolPractice {
         private String topic;
         private Teacher instructor;
         private ArrayList<Student> enrolledStudents;
+
+        //Add custom equals() and toString() methods to the Course class
+        public String toString() {
+            String courseReport = String.format("This is the course report: topic, instructor,enrolledStudents");
+            return courseReport;
+        }
+        // Resource on equals https://www.sitepoint.com/implement-javas-equals-method-correctly/
+//        public boolean equals(Object toBeCompared) {
+//            if (toBeCompared == this) {
+//                return true;
+//            }
+//            if (toBeCompared == null) {
+//                return false;
+//            }
+//            if (toBeCompared.getClass() != getClass()) {
+//                return false;
+//            }
+//            Course theCourse = (Course) toBeCompared;
+//            return theCourse.getTopic() == getTopic();
+//        }
     }
     // 4. In the school package, create a class Teacher with four fields: firstName, lastName, subject, and yearsTeaching.
     public class Teacher {
