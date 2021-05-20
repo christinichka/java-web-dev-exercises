@@ -33,10 +33,22 @@ public class Student {
     public double getGpa() {
         return gpa;
     }
+//    public String getGradeLevel() {
+//        if (this.numberOfCredits <= 29) {
+//            return "freshman";
+//        } else if (this.numberOfCredits <= 59) {
+//            return "sophomore";
+//        } else if (this.numberOfCredits <= 89) {
+//            return "junior";
+//        } else {
+//            return "senior";
+//        }
+//    }
+
     public static String getGradeLevel(int credits) {
-        if (credits <= 29) {
+        if (credits <= 29){
             return "freshman";
-        } else if (credits <= 59) {
+        } else if (credits <= 59){
             return "sophomore";
         } else if (credits <= 89) {
             return "junior";
@@ -55,27 +67,25 @@ public class Student {
         this.gpa = totalQualityScore/this.numberOfCredits;
     }
 
-    public String toString() {
-        String studentReport = String.format("%s is a %s with %d credits and a GPA of %.2f", this.name, this.getGradeLevel(this.numberOfCredits), this.getNumberOfCredits(), this.getGpa());
-        return studentReport;
-    }
-
-    public boolean equals(Object toBeCompared) {
-        if (toBeCompared == this) {
-            return true;
-        }
-        if (toBeCompared == null) {
-            return false;
-        }
-        if (toBeCompared.getClass() != getClass()) {
-            return false;
-        }
-        Student theStudent = (Student) toBeCompared;
-        return theStudent.getStudentId() == getStudentId();
-    }
+//    public String toString() {
+//        String studentReport = String.format("%s is a %s with %d credits and a GPA of %.2f", this.name, this.getGradeLevel(this.numberOfCredits), this.getNumberOfCredits(), this.getGpa());
+//        return studentReport;
+//    }
+//
+//    public boolean equals(Object toBeCompared) {
+//        if (toBeCompared == this) {
+//            return true;
+//        }
+//        if (toBeCompared == null) {
+//            return false;
+//        }
+//        if (toBeCompared.getClass() != getClass()) {
+//            return false;
+//        }
+//        Student theStudent = (Student) toBeCompared;
+//        return theStudent.getStudentId() == getStudentId();
+//    }
 
 }
 
 
-
-// Need to finish 5.5.3 toString and equals for Course class

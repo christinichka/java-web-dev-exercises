@@ -18,10 +18,10 @@ public class SchoolPractice {
         private ArrayList<Student> enrolledStudents;
 
         //Add custom equals() and toString() methods to the Course class
-        public String toString() {
-            String courseReport = String.format("This is the course report: topic, instructor,enrolledStudents");
-            return courseReport;
-        }
+//        public String toString() {
+//            String courseReport = String.format("This is the course report: topic, instructor,enrolledStudents");
+//            return courseReport;
+//        }
         // Resource on equals https://www.sitepoint.com/implement-javas-equals-method-correctly/
 //        public boolean equals(Object toBeCompared) {
 //            if (toBeCompared == this) {
